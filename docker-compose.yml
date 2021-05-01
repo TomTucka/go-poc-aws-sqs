@@ -1,0 +1,36 @@
+---
+version: "3"
+
+services:
+  app:
+    image: app
+    build: .
+    ports:
+      - 4000:4000
+    environment:
+      PATH_PREFIX: /app
+      ENVIRONMENT: local
+      AWS_ENDPOINT: http://localstack:4566
+      AWS_REGION: eu-west-1
+      AWS_ACCESS_KEY_ID: localstack
+      AWS_SECRET_ACCESS_KEY: localstack
+      QUEUE_URL: http://localstack:4566/000000000000/reindex.fifo
+
+  localstack:
+    image: localstack/localstack:0.12.2
+    environment:
+      DEFAULT_REGION: eu-west-1
+      HOSTNAME_EXTERNAL: localstack
+      SERVICES: secretsmanager,sqs
+    ports:
+      - 4566:4566
+    volumes:
+      - "./scripts/localstack:/docker-entrypoint-initaws.d"
+      - "./scripts/localstack/wait:/scripts/wait"
+      - "./scripts/data/test.json:/scripts/test.json"
+
+  elastic:
+    image: blacktop/elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"

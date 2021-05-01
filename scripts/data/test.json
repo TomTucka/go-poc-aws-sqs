@@ -1,0 +1,68 @@
+{
+    "uId": "7000-0000-2472",
+    "normalizedUid": 700000002472,
+    "caseRecNumber": "04763843",
+    "workPhoneNumber": {
+        "id": 24,
+        "phoneNumber": "(0121) 5557877",
+        "type": "Work",
+        "default": false,
+        "className": "Opg\\Core\\Model\\Entity\\PhoneNumber\\PhoneNumber"
+    },
+    "homePhoneNumber": null,
+    "mobilePhoneNumber": null,
+    "email": "test@test.com",
+    "dob": "30\/09\/1988",
+    "firstname": "Luke",
+    "middlenames": "",
+    "surname": "Crete",
+    "addressLine1": "44 test road",
+    "addressLine2": "Harborne ",
+    "addressLine3": "Birmingham",
+    "town": "Birmingham",
+    "county": "West Midlands",
+    "postcode": "B009ZE",
+    "country": "United Kingdom",
+    "isAirmailRequired": true,
+    "addresses": [
+        {
+            "addressLines": [
+                "44 test road",
+                "Harborne ",
+                "Birmingham"
+            ],
+            "postcode": "B009ZE",
+            "className": "Opg\\Core\\Model\\Entity\\Address\\Address"
+        }
+    ],
+    "phoneNumber": "(0121) 5557877",
+    "phoneNumbers": [
+        {
+            "id": 24,
+            "phoneNumber": "(0121) 5557877",
+            "type": "Work",
+            "default": false,
+            "className": "Opg\\Core\\Model\\Entity\\PhoneNumber\\PhoneNumber"
+        }
+    ],
+    "personType": "Client",
+    "cases": [
+        {
+            "uId": "7000-0000-2506",
+            "normalizedUid": 700000002506,
+            "caseRecNumber": "17013542",
+            "batchId": null,
+            "className": "Opg\\Core\\Model\\Entity\\CaseItem\\Deputyship\\Order"
+        },
+        {
+            "uId": "7000-0000-2563",
+            "normalizedUid": 700000002563,
+            "caseRecNumber": "30754346",
+            "batchId": null,
+            "className": "Opg\\Core\\Model\\Entity\\CaseItem\\Deputyship\\Order"
+        }
+    ],
+    "companyName": null,
+    "orders": null,
+    "className": "Opg\\Core\\Model\\Entity\\CaseActor\\Client"
+}
